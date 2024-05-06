@@ -2,8 +2,6 @@ server:
   port: 8080
 
 spring:
-  application:
-    name: user
   datasource:
     url: jdbc:postgresql://localhost:5433/userservicedb
     username: postgres
@@ -41,5 +39,26 @@ management:
 endpoints:
   shutdown:
     enabled: true
+
+
+
+# key cloak config
+keycloak:
+  realm: FoodSwift
+  auth-server-url: http://localhost:8072
+  # Use 'external' in production
+  ssl-required: external
+
+  # Name of the client
+  resource: food_swift
+  # Replace with your client's secret
+  credentials:
+    secret: yvYFfgSisY8ZXTwC5VzlWheLGji3gRMt
+  use-resource-role-mappings: true
+  bearer-only: true
+
+grant-type: password
+name: atulpatel
+password: atul@2001
     
 
