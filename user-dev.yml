@@ -40,13 +40,21 @@ management:
         enabled: true
     shutdown:  # for eureka server
       enabled: true
+  info:
+    env:
+      enabled: true
 
 
 endpoints:
   shutdown:
     enabled: true
 
-
+#information above this instance
+info:
+  app:
+    name: "User"
+    description: "User Service With Food Order System"
+    version: "1.0.0"
 
 # key cloak config
 keycloak:
