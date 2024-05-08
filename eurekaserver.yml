@@ -1,5 +1,5 @@
 server:
-  port: 8072
+  port: 8073
 
 eureka:
   instance:
@@ -34,3 +34,14 @@ management:
 endpoints:
   shutdown:
     enabled: true
+
+
+# for eureka server
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8072/eureka/
