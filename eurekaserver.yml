@@ -36,12 +36,3 @@ endpoints:
     enabled: true
 
 
-# for eureka server
-eureka:
-  instance:
-    preferIpAddress: true
-  client:
-    fetchRegistry: true
-    registerWithEureka: true
-    serviceUrl:
-      defaultZone: http://localhost:8072/eureka/

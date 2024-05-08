@@ -62,3 +62,12 @@ name: atulpatel
 password: atul@2001
     
 
+# for eureka server
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8073/eureka/
