@@ -52,7 +52,7 @@ endpoints:
 #information above this instance
 info:
   app:
-    name: "User"
+    name: "Java"
     description: "User Service With Food Order System"
     version: "1.0.0"
 
