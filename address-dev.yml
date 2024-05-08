@@ -51,7 +51,7 @@ endpoints:
 #information above this instance
 info:
   app:
-    name: "Address Service"
+    name: " Service"
     description: "Address Service With Food Order System"
     version: "1.0.0"
  
