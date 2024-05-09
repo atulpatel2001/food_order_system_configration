@@ -87,14 +87,3 @@ eureka:
     registerWithEureka: true
     serviceUrl:
       defaultZone: http://localhost:8073/eureka/
-
-logging:
-  level:
-    com:
-      food:
-        app:
-          user: DEBUG
-
-  pattern:
-    level: "%5p [${spring.application.name},%X{trace_id},%X{span_id}]"
-
