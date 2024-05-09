@@ -3,8 +3,9 @@ server:
  
 
 spring:
-  main:
-    banner-mode: off
+  output:
+    ansi:
+      enabled: always
   cloud:
     gateway:
       httpclient:
@@ -27,7 +28,14 @@ springdoc:
   swagger-ui:
     path: /
     enabled: true
-    config-url: /v3/api-docs/swagger-config
+    urls:
+      - name: user
+        url: user/v3/api-docs
+      - name: department
+        url: /v3/api-docs/department
+      - name: organization
+        url: /v3/api-docs/organization
+
   enable-native-support: true
   api-docs:
     enabled: true
