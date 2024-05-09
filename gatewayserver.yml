@@ -1,6 +1,6 @@
 server:
   port: 8074
-  forward-headers-strategy: framework
+ 
 
 spring:
   main:
