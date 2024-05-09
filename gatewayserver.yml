@@ -1,0 +1,56 @@
+server:
+  port: 8074
+
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: "http://localhost:8073/eureka/"
+
+
+spring:
+  cloud:
+    gateway:
+      httpclient:
+        # time out configration as yml file
+        connect-timeout: 1000
+        response-timeout: 10s
+      discovery:
+        locator:
+          enabled: true
+          lowerCaseServiceId: true
+
+
+#enable all actuator endpoint
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  # for all actuator property
+  endpoint:
+    gateway:
+      enabled: true
+  info:
+    env:
+      enabled: true
+
+
+info:
+  app:
+    name: "gateway server"
+    description: "Food Order System  gateway server"
+    version: "1.0.0"
+
+
+logging:
+  level:
+    com:
+      gateway:
+        sever: DEBUG
+    
+    
+    
