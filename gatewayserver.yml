@@ -1,5 +1,6 @@
 server:
   port: 8074
+  forward-headers-strategy: framework
 
 spring:
   cloud:
@@ -46,6 +47,16 @@ logging:
     com:
       gateway:
         sever: DEBUG
+    org:
+      springframework:
+        cloud:
+          gateway: DEBUG
+        http:
+          server:
+            reactive: DEBUG
+        web:
+          reactive: DEBUG
+        
     
     
 # for eureka server
