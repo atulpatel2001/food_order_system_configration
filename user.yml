@@ -1,0 +1,102 @@
+server:
+  port: 8080
+ 
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/userservicedb
+    username: postgres
+    password: root123
+
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest 
+
+
+# actuator endpoint
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  health:
+    readiness-state:
+      enabled: true
+    liveness-state:
+      enabled: true
+  endpoint:
+    health:
+      probes:
+        enabled: true
+    shutdown:  # for eureka server
+      enabled: true
+  info:
+    env:
+      enabled: true
+  metrics:
+    tags:
+      application: ${spring.application.name}
+
+
+endpoints:
+  shutdown:
+    enabled: true
+
+#information above this instance
+info:
+  app:
+    name: "User Service"
+    description: "User Service With Food Order System"
+    version: "1.0.0"
+
+# key cloak config
+keycloak:
+  realm: FoodSwift
+  auth-server-url: http://localhost:8072
+  # Use 'external' in production
+  ssl-required: external
+
+  # Name of the client
+  resource: food_swift
+  # Replace with your client's secret
+  credentials:
+    secret: yvYFfgSisY8ZXTwC5VzlWheLGji3gRMt
+  use-resource-role-mappings: true
+  bearer-only: true
+
+grant-type: password
+name: atulpatel
+password: atul@2001
+    
+
+# for eureka server
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    fetchRegistry: true
+    registerWithEureka: true
+    serviceUrl:
+      defaultZone: http://localhost:8073/eureka/
+
+
+
+logging:
+  level:
+    com:
+      food:
+        app:
+          user: DEBUG
+
+  pattern:
+    level: "%5p [${spring.application.name},%X{trace_id},%X{span_id}]"
+
