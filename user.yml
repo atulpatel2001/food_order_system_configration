@@ -69,7 +69,7 @@ keycloak:
   resource: food_swift
   # Replace with your client's secret
   credentials:
-    secret: oL7pRg2up09TWXgopDXgN4aXSLxH86kp
+    secret: FYYewyMnqmcvN0Ibcq1IshlEA8DGlYrv
   use-resource-role-mappings: true
   bearer-only: true
 
