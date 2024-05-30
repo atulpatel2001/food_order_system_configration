@@ -32,6 +32,14 @@ spring:
     port: 5672
     username: guest
     password: guest 
+  
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://localhost:8072/realms/FoodSwift/protocol/openid-connect/certs
+
+
 
 
 springdoc:
