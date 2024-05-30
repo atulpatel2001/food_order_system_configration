@@ -61,7 +61,7 @@ info:
 # key cloak config
 keycloak:
   realm: FoodSwift
-  auth-server-url: http://localhost:8072
+  auth-server-url: http://localhost:8072/auth
   # Use 'external' in production
   ssl-required: external
 
