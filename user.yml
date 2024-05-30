@@ -75,7 +75,7 @@ keycloak:
 
 grant-type: password
 name: atulpatel
-password: atul@2001
+password: Atul@2001
     
 
 # for eureka server
