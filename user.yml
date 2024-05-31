@@ -62,14 +62,10 @@ info:
 keycloak:
   realm: FoodSwift
   auth-server-url: http://localhost:8072
-  # Use 'external' in production
   ssl-required: external
-
-  # Name of the client
   resource: food_swift
-  # Replace with your client's secret
   credentials:
-    secret: 5dctVF0pAQ7JtpOXsN6skeUMPcjHifwP
+    secret: iYiZHrvwD7a8U0Jhfq19Wk3UlQDUjITi
   use-resource-role-mappings: true
   bearer-only: true
 
