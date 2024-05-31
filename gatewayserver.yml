@@ -42,13 +42,13 @@ spring:
 
 
 
-springdoc:
-  swagger-ui:
-    path: /
-    enabled: true
-  enable-native-support: true
-  api-docs:
-    enabled: true
+# springdoc:
+#   swagger-ui:
+#     path: /
+#     enabled: true
+#   enable-native-support: true
+#   api-docs:
+#     enabled: true
 
 
 #enable all actuator endpoint
