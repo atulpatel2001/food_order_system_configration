@@ -69,13 +69,13 @@ keycloak:
   resource: food_swift
   # Replace with your client's secret
   credentials:
-    secret: FutwdTai1tRMA8NEvJoKgYYgWbt3hPlj
+    secret: iYiZHrvwD7a8U0Jhfq19Wk3UlQDUjITi
   use-resource-role-mappings: true
   bearer-only: true
 
 grant-type: password
 name: atulpatel
-password: atul@2001
+password: Atul@2001
     
 
 # for eureka server
