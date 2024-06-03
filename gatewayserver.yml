@@ -13,9 +13,9 @@ eureka:
 
 
 spring:
-  output:
-    ansi:
-      enabled: always
+  # output:
+  #   ansi:
+  #     enabled: always
   cloud:
     gateway:
       httpclient:
@@ -92,11 +92,11 @@ logging:
       springframework:
         cloud:
           gateway: DEBUG
-        http:
-          server:
-            reactive: DEBUG
-        web:
-          reactive: DEBUG
+        # http:
+        #   server:
+        #     reactive: DEBUG
+        # web:
+        #   reactive: DEBUG
 
   pattern:
     level: "%5p [${spring.application.name},%X{trace_id},%X{span_id}]"
